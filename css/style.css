@@ -35,3 +35,40 @@ body{
     width: 200px;
     height: 200px;
 }
+
+/*segundo card*/
+.segundo-card-container{
+    background-color: rgb(131, 94, 94);
+    border-radius: 8px;
+    justify-content: center;
+    display: flex;
+    height: 300px;
+    width: 925px;
+    padding-bottom: 200px;
+    margin-top: 100px;
+}
+
+/*terceiro card*/
+
+.terceiro-card-container{
+    background-color: rgb(172, 44, 44);
+    border-radius: 8px;
+    justify-content: center;
+    display: flex;
+    height: 300px;
+    width: 925px;
+    padding-bottom: 200px;
+    margin-top: 100px;
+}
+
+/*quarto card*/
+.terceiro-card-container{
+    background-color: rgb(172, 44, 44);
+    border-radius: 8px;
+    justify-content: center;
+    display: flex;
+    height: 300px;
+    width: 925px;
+    padding-bottom: 200px;
+    margin-top: 100px;
+}
