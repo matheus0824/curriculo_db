@@ -55,7 +55,7 @@ require_once 'partials/crud.php'
 
      <!--Quarto card(instituicao, curso e periodo)-->
     <div class="terceiro-card-container">
-        <h1>oi</h1>
+        <h1>isso é um teste</h1>
     </div>
 
     </div>
