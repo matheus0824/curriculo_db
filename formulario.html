@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Cadastro - Currículo</title>
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+<body>
+
+    <div class="pagina-cadastro">
+        <main>
+            <div class="caixa-cadastro">
+                <h1 class="titulo-pagina">PREENCHA O FORMULÁRIO</h1>
+       
+                <form method="post" action="partials/form.php">
+                     <h1>Dados pessoais</h1>
+                    <input type="text" id="username" name="nome" placeholder="Nome" required>
+                    <input type="text" id="cargo" name="cargo" placeholder="Cargo" required>
+                    <input type="text" id="resumo" name="resumo" placeholder="Resumo Profissional" required>
+                    <input type="text" id="info_pessoais" name="info_pessoais" placeholder="Informações Principais" required>
+
+
+                    <h1>Contatos</h1>
+                    <input type="email" id="email" name="email" placeholder="email" required>
+                    <input type="number" id="telefone" name="telefone" placeholder="telefone" required>
+                    <input type="text" id="perfis_profissionais" name="perfis_profissionais" placeholder="Perfis Profissionais" required>
+
+                    <h1>Experiências</h1>
+                    <input type="text" id="empresa" name="empresa" placeholder="Empresa" required>
+                    <input type="text" id="funcao" name="funcao" placeholder="Função" required>
+                    <input type="text" id="periodo" name="periodo" placeholder="Período" required>
+                    <input type="text" id="descricao" name="descricao" placeholder="Descricao" required>
+
+
+                    <h1>Formação</h1>
+                    <input type="text" id="instituicao" name="instituicao" placeholder="Instituição" required>
+                    <input type="text" id="curso" name="curso" placeholder="Curso" required>
+                    <input type="text" id="periodo" name="periodo" placeholder="Período" required>
+
+                    
+                    <div class="btn">
+                        <button>
+                            <a href="index.php">Cadastrar</a>
+                        </button>
+                    </div>
+
+                </form>
+        </main>
+    </div>
+</div>
+</body>
+</html>
+    
