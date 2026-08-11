@@ -65,16 +65,33 @@ if ($id_curriculo) {
 
     </div>
 
+    <div id="contatos" class="card">
+        <h2>Contatos</h2>
 
-    <!--segundo card(sobre contatos, email, telefone, redes sociais)-->
-    <div class="segundo-card-container">
-        <h1>oi</h1>
+        <div class="conteudo-card">
+            <p><strong>E-mail:</strong><?=htmlspecialchars($dadosPessoais['email'] ?? 'Não informado') ?></p>
+            <p><strong>telefone:</strong><?=htmlspecialchars($dadosPessoais['telefone'] ?? 'Não informado') ?></p>
+            <p><strong>Perfis Profissionais:</strong><?=htmlspecialchars($dadosPessoais['perfis_profissionais'] ?? 'Não informado') ?></p>
+        </div>
     </div>
 
-    <!--terceiro card(experiencias, funcao, periodo e descicao)-->
-    <div class="terceiro-card-container">
-        <h1>oi</h1>
+    <div id="experiencias" class="card">
+        <h2>Experiências Profissionais</h2>
+        <div class="conteudo-card">
+            <?php if(!empty($experiencias)): ?>
+                <?php foreach($experiencias as $exp): ?>
+                    <div class="item=lista">
+                        <h3><?=htmlspecialchars($dadosPessoais['funcao'])?></h3>
+                        <h4><?=htmlspecialchars($dadosPessoais['empresa'])?> . <span><?=htmlspecialchars($exp['periodo'])?></span></h4>
+                        <p><?=nl2br(htmlspecialchars($exp['descricao']))?></p>
+                    </div>
+                <?php endforeach; 
+                ?>
+            <?php else: ?>
+        </div>
     </div>
+
+
 
      <!--Quarto card(instituicao, curso e periodo)-->
     <div class="terceiro-card-container">
