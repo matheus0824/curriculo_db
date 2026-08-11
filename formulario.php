@@ -13,34 +13,32 @@
             <div class="caixa-cadastro">
                 <h1 class="titulo-pagina">PREENCHA O FORMULÁRIO</h1>
        
-                <form method="post" action="partials/form.php">
+                <form method="POST" action="partials/form.php">
                      <h1>Dados pessoais</h1>
-                    <input type="text" id="username" name="nome" placeholder="Nome" required>
+                    <input type="text" id="nome" name="nome" placeholder="Nome" required>
                     <input type="text" id="cargo" name="cargo" placeholder="Cargo" required>
-                    <input type="resumo" name="resumo" placeholder="Resumo Profissional" required>
-                    <textarea name="info_principais" ></textarea>
+                    <input type="text" name="resumo" placeholder="Resumo Profissional" required>
+                    <textarea type="text" name="info_pessoais" ></textarea>
 
                     <h1>Contatos</h1>
                     <input type="email" name="email" placeholder="email" required>
-                    <input type="texto" name="telefone" placeholder="telefone" required>
+                    <input type="text" name="telefone" placeholder="telefone" required>
                     <textarea name="perfis_profissionais"></textarea>
 
                     <h1>Experiências</h1>
                     <input type="text" id="empresa" name="empresa" placeholder="Empresa" required>
                     <input type="text" id="funcao" name="funcao" placeholder="Função" required>
-                    <input type="text" id="periodo" name="periodo" placeholder="Período" required>
+                    <input type="text" name="periodo_exp" placeholder="Período de Experiência" required>
                     <textarea name="descricao_exp">contenos</textarea>
 
                     <h1>Formação</h1>
                     <input type="text" id="instituicao" name="instituicao" placeholder="Instituição" required>
                     <input type="text" id="curso" name="curso" placeholder="Curso" required>
-                    <input type="text" id="periodo" name="periodo" placeholder="Período" required>
+                    <input type="text" id="periodo" name="periodo_exp" placeholder="Período de Experiência" required>
 
                     
                     <div class="btn">
-                        <button>
-                            <a href="index.php">Cadastrar</a>
-                        </button>
+                        <button type="submit">Cadastrar</button>
                     </div>
 
                 </form>

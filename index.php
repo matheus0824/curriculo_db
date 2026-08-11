@@ -1,6 +1,26 @@
 <?php
-require_once 'partials/crud.php'
+require_once __DIR__ . '/partials/crud.php';
+
+$id_curriculo = $_GET['id'] ?? null;
+
+if (!$id_curriculo) {
+    $stmt = $pdo->query("SELECT id FROM dados_pessoais ORDER BY id DESC LIMIT 1");
+    $ultimo = $stmt->fetch();
+    $id_curriculo = $ultimo['id'] ?? null;
+}
+
+if ($id_curriculo) {
+    $dadosPessoais = readWhere($pdo, 'dados_pessoais', 'id = ?', [$id_curriculo])[0] ?? null;
+
+    $contatos = readWhere($pdo, 'contatos', 'dados_pessoais_id = ?', [$id_curriculo])[0] ?? null;
+
+    $experiencias = readWhere($pdo, 'experiencias', 'dados_pessoais_id = ?', [$id_curriculo]);
+
+    $formacoes = readWhere($pdo, 'formacao', 'dados_pessoais_id = ?', [$id_curriculo]);
+}
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -38,7 +58,7 @@ require_once 'partials/crud.php'
         </div>
 
         <div class="">
-            <h1><?= $dadosPessoais['nome'] ?? 'Nome não informado'?></h1>
+            <h1><?= $sqlDadosPessoais['nome'] ?? 'Nome não informado'?></h1>
         </div>
 
     </div>
