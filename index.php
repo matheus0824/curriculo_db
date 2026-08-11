@@ -90,13 +90,19 @@ if ($id_curriculo) {
             <?php else: ?>
         </div>
     </div>
+        
+    <div id="formacao" class="card">
+        <h2>Formação Acadêmica</h2>
+        <div class="conteudo-card">
+            <?php if (!empty($formacoes)): ?>
+                <?php foreach($formacoes as $form): ?>
+                    <div class="item-lista">
+                        <h3><?=htmlspecialchars($form['instituicao'])?></h3>
+                        <h4><?=htmlspecialchars($form['curso'])?> . <span><?=htmlspecialchars($form[''])?></span></h4>
 
+                    </div>
 
-
-     <!--Quarto card(instituicao, curso e periodo)-->
-    <div class="terceiro-card-container">
-        <h1>isso é um teste</h1>
-    </div>
+        </div>
 
     </div>
     
