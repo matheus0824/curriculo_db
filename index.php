@@ -11,11 +11,8 @@ if (!$id_curriculo) {
 
 if ($id_curriculo) {
     $dadosPessoais = readWhere($pdo, 'dados_pessoais', 'id = ?', [$id_curriculo])[0] ?? null;
-
     $contatos = readWhere($pdo, 'contatos', 'dados_pessoais_id = ?', [$id_curriculo])[0] ?? null;
-
     $experiencias = readWhere($pdo, 'experiencias', 'dados_pessoais_id = ?', [$id_curriculo]);
-
     $formacoes = readWhere($pdo, 'formacao', 'dados_pessoais_id = ?', [$id_curriculo]);
 }
 ?>
@@ -42,26 +39,32 @@ if ($id_curriculo) {
         </nav>
     </header>
 
-    <div class="separando">
+    <main class= "container-principal">
+        <div id="perfil" class="card">
 
-    <!--primeiro card(foto de perfil, foto de  capa e pequena
-    descriçao do perfil)-->
+            <div class="foto_capa">
+                 <img src="img/fotoCapa.jpg" alt="Foto da capa">
+            </div>
 
-    <div class="primeiro_card_container">
-        
-        <div class="foto_capa"> 
-            <img src="img/fotoCapa.jpg" alt="Foto da capa">
-        <div>
-
-        <div class="foto_perfil">
-            <img src="img/fotoPerfil.png" alt="Foto de perfil">
+            <div class="header=perfil">
+              <div class="foto_perfil">
+                <img src="img/fotoPerfil.png" alt="Foto de perfil">
+            </div>
         </div>
 
-        <div class="">
-            <h1><?= $sqlDadosPessoais['nome'] ?? 'Nome não informado'?></h1>
-        </div>
+
+    <div class="info_perfil">
+
+        <h1><?=htmlspecialchars($dadosPessoais['nome']) ?? 'Nome não informado' ?></h1>
+        <h2><?=htmlspecialchars($dadosPessoais['cargo'] ?? 'Cargo não informado')?></h2>
+        <p class="resumo"><?=nl2br(htmlspecialchars($dadosPessoais['resumo'] ??''))?></p>
+        <?php if (!empty($dadosPessoais['info_pessoais'])): ?>
+            <p class="info_adicional"><small><?=htmlspecialchars($dadosPessoais['info_pessoais'])?></small></p>
+        <?php endif; 
+        ?>
 
     </div>
+
 
     <!--segundo card(sobre contatos, email, telefone, redes sociais)-->
     <div class="segundo-card-container">
@@ -81,7 +84,7 @@ if ($id_curriculo) {
     </div>
     
 
-
+    </main>
 
 </body>
 </html>
