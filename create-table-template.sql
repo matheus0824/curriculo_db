@@ -41,3 +41,7 @@ create table if not exists formacao(
 	on delete cascade 
 	
 );
+
+ALTER TABLE dados_pessoais 
+ADD COLUMN foto_perfil VARCHAR(255) AFTER info_pessoais,
+ADD COLUMN foto_capa VARCHAR(255) AFTER foto_perfil;
