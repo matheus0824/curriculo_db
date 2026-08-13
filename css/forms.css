@@ -1,17 +1,82 @@
-body{
-    background-color: rgb(217, 235, 238);
+body {
+    background-color: #d9ebee;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px 0;
 }
 
-.pagina-cadastro{
-    margin-top: 100px;
-    background-color: rgb(191, 196, 196);
+.pagina-cadastro {
+    background-color: #ffffff;
     display: flex;
-    align-items: flex-start;
     justify-content: center;
-    width: 45%;
-    margin-left: 30%;
-    border-radius: 16px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-.caixa-cadastro form{
-display: column;
+
+.caixa-cadastro {
+    width: 800px;
+}
+
+.caixa-cadastro form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.caixa-cadastro h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.caixa-cadastro h2 {
+    font-size: 40px;
+    color: #080808;
+    margin-top: 15px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 5px;
+}
+
+.caixa-cadastro label {
+    font-weight: bold;
+    font-size: 20px;
+    color: #000000;
+    margin-top: 5px;
+}
+
+.caixa-cadastro input,
+.caixa-cadastro textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.caixa-cadastro textarea {
+    resize: vertical;
+    min-height: 70px;
+}
+
+.btn button {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #0a66c2;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn button:hover {
+    background-color: #004182;
 }
